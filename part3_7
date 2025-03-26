@@ -1,0 +1,64 @@
+#Задача 1
+for i in range(10):
+  print("Python is awesome!")
+
+
+#Задача 2
+st = "Век живи - век учись!"
+for i in range(10):
+  print(st)
+
+
+# Задача 3
+for i in range(6):
+  print("AAA")
+
+for i in range(5):
+  print("BBBB")
+
+print("E")
+
+for i in range(9):
+  print("TTTTT")
+
+print("G")
+
+
+#Задача 4
+n = int(input("Введите натуральное число n (1-20):"))
+if 1 <= n <= 20:
+  for i in range(n):
+    print("*" * 19)
+else:
+  print("Введенное число лежит вне допустимого диапазона")
+
+
+#Задача 5
+n = input("")
+for i in range(10):
+  print(i, n)
+
+
+#Задача 6
+n = int(input("Введите натуральное число n: "))
+for i in range(n+1):
+  print("Квадрат числа ", i, " равен ", i*i)
+
+
+#Задача 7
+n = int(input("Введите натуральное число n (n >= 2):"))
+if n >= 2:
+  for i in range(n, 0, -1):
+    print('*' * i)
+else:
+  print("Введенное число лежит вне допустимого диапазона")
+
+
+#Задача 8
+m = int(input("Введите стартовое количество организмов: "))
+p = int(input("Введите среднесуточное увеличение в %: "))
+т = int(input("Введите количество дней для размножения: "))
+population = m
+for i in range(1, n + 1):
+    print(i, round(population, 6))
+    population += population * (p / 100)
