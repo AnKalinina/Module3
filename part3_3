@@ -1,0 +1,103 @@
+# Задача 1
+year = int(input().strip())
+
+if year % 100 == 0:
+    print("YES")
+else:
+    print("NO")
+
+
+# Задача 2
+x1 = int(input())
+y1 = int(input())
+
+x2 = int(input())
+y2 = int(input())
+
+color1 = (x1 + y1) % 2
+color2 = (x2 + y2) % 2
+
+if color1 == color2:
+    print("YES")
+else:
+    print("NO")
+
+
+# Задача 3
+age = int(input("Введите возраст: "))
+gender = input("Введите пол (m/f): ")
+
+if 10 <= age <= 15 and gender == 'f':
+    print("YES")
+else:
+    print("NO")
+
+
+# Задача 4
+number = int(input())
+roman_numerals = {
+    1: "I",
+    2: "II",
+    3: "III",
+    4: "IV",
+    5: "V",
+    6: "VI",
+    7: "VII",
+    8: "VIII",
+    9: "IX",
+    10: "X"
+}
+
+if 1 <= number <= 10:
+    print(roman_numerals[number])
+else:
+    print("ошибка")
+
+
+# Задача 5
+number = int(input("Введите натуральное число: "))
+
+if number % 2 != 0:
+    print("YES")
+elif 2 <= number <= 5 and number % 2 == 0:
+    print("NO")
+elif 6 <= number <= 20 and number % 2 == 0:
+    print("YES")
+elif number > 20 and number % 2 == 0:
+    print("NO")
+
+
+#Задача 6
+x1, y1, x2, y2 = map(int, input().split())
+
+if abs(x1 - x2) == abs(y1 - y2):
+    print("YES")
+else:
+    print("NO")
+
+
+#Задача 7
+def can_knight_move(start_col, start_row, end_col, end_row):
+    col_diff = abs(start_col - end_col)
+    row_diff = abs(start_row - end_row)
+
+    return (col_diff == 2 and row_diff == 1) or (col_diff == 1 and row_diff == 2)
+
+start_col = int(input("Введите номер столбца первой клетки (1-8): "))
+start_row = int(input("Введите номер строки первой клетки (1-8): "))
+end_col = int(input("Введите номер столбца второй клетки (1-8): "))
+end_row = int(input("Введите номер строки второй клетки (1-8): "))
+
+if can_knight_move(start_col, start_row, end_col, end_row):
+    print("YES")
+else:
+    print("NO")
+
+
+#Задача 8
+x1, y1, x2, y2 = map(int, input().split())
+
+if x1 == x2 or y1 == y2 or abs(x1 - x2) == abs(y1 - y2):
+    print("YES")
+else:
+    print("NO")
