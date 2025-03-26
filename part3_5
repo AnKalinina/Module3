@@ -1,0 +1,80 @@
+# Задача 1
+import math
+
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+
+distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+print(distance)
+
+
+# Задача 2
+import math
+R = float(input("Введите радиус R: "))
+area = math.pi * R ** 2
+circumference = 2 * math.pi * R
+
+print(f"Площадь круга: {area}")
+print(f"Длина окружности: {circumference}")
+
+
+# задача 3
+import math
+
+a = float(input())
+b = float(input())
+arithmetic_mean = (a + b) / 2
+geometric_mean = math.sqrt(a * b)
+harmonic_mean = 2 * (a * b) / (a + b)
+quadratic_mean = math.sqrt((a**2 + b**2) / 2)
+
+print(arithmetic_mean)
+print(geometric_mean)
+print(harmonic_mean)
+print(quadratic_mean)
+
+
+# Задача 4
+import math
+
+x = float(input("Введите угол в градусах: "))
+x_rad = math.radians(x)
+result = math.sin(x_rad) + math.cos(x_rad) + math.tan(2 * x_rad)
+print(result)
+
+
+#Задача 5
+import math
+x = float(input())
+result = math.ceil(x) + math.floor(x)
+
+print(result)
+
+
+#Задача 6
+import math
+
+a = float(input("Введите a (a ≠ 0): "))
+b = float(input("Введите b: "))
+c = float(input("Введите c: "))
+D = b**2 - 4*a*c
+if D > 0:
+    x1 = (-b + math.sqrt(D)) / (2 * a)
+    x2 = (-b - math.sqrt(D)) / (2 * a)
+    print(f"Корни уравнения: {min(x1, x2)}, {max(x1, x2)}")
+elif D == 0:
+    x = -b / (2 * a)
+    print(f"Единственный корень: {x}")
+else:
+    print("Нет корней")
+
+
+#Задача 7
+import math
+n = int(input())
+a = float(input())
+area = (n * a**2) / (4 * math.tan(math.pi / n))
+
+print(area)
