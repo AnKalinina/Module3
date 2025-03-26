@@ -1,0 +1,117 @@
+#задача 1
+b1 = int(input("Введите первый член прогрессии: "))
+q = int(input("Введите знаменатель прогрессии: "))
+n = int(input("Введите номер члена прогрессии: "))
+
+print("n-ый член геометрической прогрессии: ", (b1 * (d ** (n - 1))))
+
+
+#Задача 2
+a = int(input("Введите количество сантиметров: "))
+
+print("Число метров: ", a // 100)
+
+
+#Задача 3
+N = int(input("Введите количество школьников: "))
+k = int(input("Введиет количество мандаринов: "))
+
+print("Количество мандаринов, которое достанется каждому школьнику: ", k // N)
+print("Количество мандаринов, оставшихся в корзине: ", k % N)
+
+
+#Задача 4
+def calc(n):
+    if n % 2 == 0:
+        return n // 2
+    else:
+        return (n // 2) + 1
+
+n = int(input("Введите население Вселенной: "))
+survivors = calc(n)
+
+print(survivors)
+
+
+#Задача 5
+def find_coupe_number(seat_number):
+    if seat_number < 1 or seat_number > 36:
+        return "Номер места должен быть от 1 до 36"
+
+    coupe_number = (seat_number - 1) // 4 + 1
+    return coupe_number
+
+seat_number = int(input("Введите номер места (от 1 до 36): "))
+coupe_number = find_coupe_number(seat_number)
+
+print(coupe_number)
+
+
+# Задача 6
+minutes = int(input("Введите количество минут: "))
+
+hours = minutes // 60
+remaining_minutes = minutes % 60
+
+print(f"{minutes} минут = {hours} часов и {remaining_minutes} минут")
+
+
+# Задача 7
+number = int(input("Введите положительное трехзначное число: "))
+
+
+if 100 <= number <= 999:
+
+    hundreds = number // 100
+    tens = (number // 10) % 10
+    units = number % 10
+
+    sum_of_digits = hundreds + tens + units
+    product_of_digits = hundreds * tens * units
+
+
+    print(f"Сумма цифр = {sum_of_digits}")
+    print(f"Произведение цифр = {product_of_digits}")
+else:
+    print("Ошибка: введенное число не является трехзначным.")
+
+
+
+# Задача 8
+def generate_permutations(n):
+    digits = str(n)
+
+    if len(digits) != 3 or len(set(digits)) != 3:
+        raise ValueError("Введите трехзначное число с различными цифрами.")
+
+    permutations = [
+        digits,        # abc
+        digits[0] + digits[2] + digits[1],  # acb
+        digits[1] + digits[0] + digits[2],  # bac
+        digits[1] + digits[2] + digits[0],  # bca
+        digits[2] + digits[0] + digits[1],  # cab
+        digits[2] + digits[1] + digits[0]   # cba
+    ]
+
+    for perm in permutations:
+        print(perm)
+
+number = int(input("Введите трехзначное число с различными цифрами: "))
+generate_permutations(number)
+
+
+# Задача 9
+number = input("Введите четырёхзначное число: ")
+
+if len(number) == 4 and number.isdigit():
+    thousands = number[0]
+    hundreds = number[1]
+    tens = number[2]
+    units = number[3]
+
+    print(f"Цифра в позиции тысяч равна {thousands}")
+    print(f"Цифра в позиции сотен равна {hundreds}")
+    print(f"Цифра в позиции десятков равна {tens}")
+    print(f"Цифра в позиции единиц равна {units}")
+else:
+    print("Ошибка: введите корректное четырёхзначное число.")
