@@ -1,0 +1,78 @@
+#Задача 1
+team_name = input("Введите название футбольной команды: ")
+length = len(team_name)
+
+print(f"Футбольная команда {team_name} имеет длину {length} символов")
+
+
+#Задача 2
+city1 = input()
+city2 = input()
+city3 = input()
+
+cities = [city1, city2, city3]
+
+shortest_city = min(cities, key=len)
+longest_city = max(cities, key=len)
+
+print(shortest_city)
+print(longest_city)
+
+
+#Задача 3
+def is_valid_email(email):
+    if '@' in email:
+        username, domain = email.split('@', 1)
+        if '.' in domain:
+            return "YES"
+    return "NO"
+
+email_address = input().strip()
+print(is_valid_email(email_address))
+
+
+#Задача 4
+input_string = input()
+
+for i in range(0, len(input_string), 2):
+    print(input_string[i])
+
+
+#Задача 5
+input_string = input()
+
+for char in reversed(input_string):
+    print(char)
+
+
+#Задача 6
+input_string = input("Введите строку: ")
+plus_count = input_string.count('+')
+asterisk_count = input_string.count('*')
+
+print(f"Символ '+' встречается {plus_count} раз.")
+print(f"Символ '*' встречается {asterisk_count} раз.")
+
+
+#Задача 7
+def count_vowels_and_consonants(s):
+    vowels = "ауоыиэяюёеАУОЫИЭЯЮЁЕ"
+    consonants = "бвгджзйклмнпрстфхцчшщБВГДЖЗЙКЛМНПРСТФХЦЧШЩ"
+
+    vowel_count = 0
+    consonant_count = 0
+
+    for char in s:
+        if char in vowels:
+            vowel_count += 1
+        elif char in consonants:
+            consonant_count += 1
+
+    return vowel_count, consonant_count
+
+input_string = input("Введите строку: ")
+vowels_count, consonants_count = count_vowels_and_consonants(input_string)
+
+print(f"Гласные: {vowels_count}, Согласные: {consonants_count}")
+
+
