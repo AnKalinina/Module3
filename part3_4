@@ -1,0 +1,72 @@
+#Задача 1
+S = float(input("Введите расстояние S (км): "))
+V1 = float(input("Введите скорость первой старушки V1 (км/ч): "))
+V2 = float(input("Введите скорость второй старушки V2 (км/ч): "))
+
+print(S / (V1 + V2))
+
+
+#Задача 2
+number = float(input())
+
+if number == 0:
+    print("Обратного числа не существует")
+else:
+    inverse_number = 1 / number
+    print(inverse_number)
+
+
+#Задача 3
+n = int(input("Введите количество собачьих лет: "))
+
+if n <= 0:
+    print("Количество собачьих лет должно быть натуральным числом.")
+elif n == 1:
+    human_years = 10.5
+elif n == 2:
+    human_years = 21.0
+else:
+    human_years = 21.0 + (n - 2) * 4
+
+print(f"Возраст собаки в человеческих годах: {human_years}")
+
+
+#Задача 4
+number = input("Введите положительное действительное число: ")
+
+decimal_point_index = number.index('.')
+
+first_digit_after_decimal = number[decimal_point_index + 1]
+
+print(first_digit_after_decimal)
+
+
+#Задача 5
+number = float(input())
+
+fractional_part = number - int(number)
+
+print(fractional_part)
+
+
+#Задача 6
+a = int(input())
+b = int(input())
+c = int(input())
+
+numbers = [a, b, c]
+numbers.sort(reverse=True)
+
+for number in numbers:
+    print(number)
+
+
+#Задача 7
+p1 = int(input())
+p2 = int(input())
+q1 = int(input())
+q2 = int(input())
+
+manhattan_distance = abs(p1 - q1) + abs(p2 - q2)
+
+print(manhattan_distance)
